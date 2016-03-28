@@ -26,7 +26,7 @@ public class Ciudades {
       while((line = br.readLine()) != null && correctFormat) {
         parseDistancias(line);
       }
-      mostrar();
+      //mostrar();
     } catch (IOException e) {
       e.printStackTrace();
     } finally {
@@ -59,7 +59,7 @@ public class Ciudades {
     setNumeroCiudades(Integer.parseInt(linea));
   }
 
-  private int getNumeroCiudades() {
+  public int getNumeroCiudades() {
     return numeroCiudades;
   }
 
@@ -67,7 +67,7 @@ public class Ciudades {
     this.numeroCiudades = numeroCiudades;
   }
 
-  private ArrayList<ArrayList<Integer>> getDistancias() {
+  public ArrayList<ArrayList<Integer>> getDistancias() {
     return distancias;
   }
 

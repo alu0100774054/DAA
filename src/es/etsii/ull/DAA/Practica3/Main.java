@@ -11,7 +11,15 @@ public class Main {
     String fichero = pedirFichero();
     Ciudades ciudades = new Ciudades(fichero);
     
-    System.out.println("");
+    Problema tsp = new Problema(ciudades.getNumeroCiudades(), ciudades.getDistancias());
+    System.out.println("Información del problema");
+    System.out.println("________________________");
+    String informacion = tsp.toString();
+    System.out.println(informacion);
+    
+    // Creamos las distintas técnicas y la solucion.
+    FuerzaBruta fuerzaBruta = new FuerzaBruta();
+    Solucion solucion = new Solucion();
   }
   private static String pedirFichero() throws Exception {
     Scanner entradaUsuario = null;
