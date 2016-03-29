@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class FuerzaBruta {
   private Solucion solucionActual;
+  private final int CIUDAD_INICIAL = 0;
   
   public FuerzaBruta() {
     solucionActual = null;
@@ -31,6 +32,7 @@ public class FuerzaBruta {
             int incremento = subSolucion.getDistanciaMinima() + problema.getCoste(subSolucion.obtenerUltimaCiudad(), i);
             ArrayList<Integer> rutaIncrementada = (ArrayList<Integer>) subSolucion.getRuta().clone();
             rutaIncrementada.add(i);
+            System.out.println("Incrementa el coste a " + incremento);
             Solucion solucionIncrementada = new Solucion(incremento, rutaIncrementada);
             resolverPorFuerzaBruta(problema, solucionIncrementada);
           }
@@ -46,8 +48,8 @@ public class FuerzaBruta {
     this.solucionActual = solucionActual;
   }
 
-  public int getCIUDAD_INICIAL() {
-    return getCIUDAD_INICIAL();
+  private int getCIUDAD_INICIAL() {
+    return CIUDAD_INICIAL;
   }
   
 }

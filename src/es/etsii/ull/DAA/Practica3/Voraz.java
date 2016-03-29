@@ -2,7 +2,8 @@ package es.etsii.ull.DAA.Practica3;
 
 import java.util.ArrayList;
 
-public class Voraz extends Algoritmo {
+public class Voraz {
+  private final int CIUDAD_INICIAL = 0;
   
   public Voraz() {}
   
@@ -43,8 +44,10 @@ public class Voraz extends Algoritmo {
     solucion.setDistanciaMinima(distanciaTotal);
     return solucion;
   }
-  
-  public int getCIUDAD_INICIAL() {
-    return getCIUDAD_INICIAL();
+
+  private int getCIUDAD_INICIAL() {
+    return CIUDAD_INICIAL;
   }
+  
+  
 }
